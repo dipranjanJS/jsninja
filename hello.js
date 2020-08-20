@@ -1,3 +1,5 @@
+const btn = document.getElementById('move');
+
 var myArr = [1,2,0,3,0,5];
 document.getElementById('para').textContent = myArr;
 
@@ -17,6 +19,8 @@ function moveZerosToEnd(nums) {
             count += 1
         }
         j += 1
+        console.log(nums);
     }
     document.getElementById('para').textContent = nums;
 }
+btn.addEventListener('click', moveZerosToEnd.bind(null, myArr));
